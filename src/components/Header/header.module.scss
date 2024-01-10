@@ -1,0 +1,19 @@
+.hContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.headerTitle{
+    align-items: center;
+}
+
+.hButtons{
+    display: flex;
+    flex-direction: row;
+}
+footer{
+    align-items: center;
+    text-align: center;
+    color: #F5F5F5;
+}
