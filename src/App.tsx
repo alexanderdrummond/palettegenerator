@@ -4,6 +4,7 @@ import { HeaderComponent } from "./components/Header/Header";
 import { NavComponent } from "./components/Navbar/Nav";
 import ColorPalette from "./components/Palette/Test";
 import { ButtonComponent } from "./components/Buttons/Buttons";
+import { Footer } from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
       <div>
         <NavComponent />
         <HeaderComponent />
-        
+        <Footer />
       </div>
     </>
   );
