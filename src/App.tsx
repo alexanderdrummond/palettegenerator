@@ -1,6 +1,5 @@
-import { useState } from "react";
 import "./App.css";
-import ColorPalette from "./components/Palette/Test";
+import {ColorPalette } from "./components/Palette/Palette";
 
 function App() {
   return (
