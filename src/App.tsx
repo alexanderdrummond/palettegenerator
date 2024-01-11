@@ -1,11 +1,12 @@
-import { useState } from "react";
 import "./App.css";
-import ColorPalette from "./components/Palette/Test";
+import Navbar from "./components/Nav/NavBar";
+import { ColorPalette } from "./components/Palette/Palette";
 
 function App() {
   return (
     <>
       <div>
+        <Navbar />
         <ColorPalette />
       </div>
     </>
