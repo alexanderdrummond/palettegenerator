@@ -1,7 +1,9 @@
+import SavedContent from "../components/Saved/SavedContent/SavedContent";
+
 function SavedPalettes() {
   return (
     <div>
-      <h2>Saved Palettes</h2>
+      <SavedContent />
     </div>
   );
 }
