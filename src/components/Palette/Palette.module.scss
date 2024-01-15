@@ -12,6 +12,7 @@
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
+      text-align: center;
     }
   }
 
@@ -22,6 +23,7 @@
   }
 
   .btnContainer {
+    display: flex;
     transition: margin-top 0.5s ease-out;
     margin-top: 2rem;
     > button {
@@ -46,6 +48,7 @@
   flex-direction: column;
   align-items: flex-start;
   margin: 10px;
+  
   animation: fadeIn 0.5s ease-out;
 
   .colorBlock {
@@ -86,4 +89,37 @@
       }
     }
   }
+}
+
+@media only screen and (max-width: 750px) {
+  .container {
+    
+  
+  
+    .colorSection {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 440px;
+      margin: auto;      
+      margin-bottom: 30px;
+    }
+
+    .btnContainer {
+      display: flex;
+      flex-direction: column;
+      transition: margin-top 0.5s ease-out;
+      margin-top: 5rem;
+      margin: 0.33rem;
+      
+      button{
+        margin-bottom: 10px;
+      }
+      
+      
+    }
+  }
+  
+ 
+
 }

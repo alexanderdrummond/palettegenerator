@@ -70,6 +70,7 @@ export const ColorPalette: React.FC = () => {
             </div>
           );
         })}
+        
       </section>
       <div className={styles.btnContainer}>
         <GradientButton text="Generate" onClick={fetchColors} />
@@ -77,6 +78,7 @@ export const ColorPalette: React.FC = () => {
           <GradientButton text="Save this one!" onClick={savePalette} />
         )}
       </div>
+     
     </div>
   );
 };
