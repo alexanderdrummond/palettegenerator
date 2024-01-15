@@ -1,0 +1,15 @@
+.palette-preview {
+  text-align: center;
+
+  .selector-container {
+    margin-bottom: 20px;
+  }
+
+  .app-window {
+    margin: 0 auto;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+}
