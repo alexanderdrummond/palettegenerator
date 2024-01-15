@@ -1,17 +1,14 @@
-
 import "./App.css";
-import { HeaderComponent } from "./components/Header/Header";
-import { NavComponent } from "./components/Navbar/Nav";
-import ColorPalette from "./components/Palette/Test";
-import { ButtonComponent } from "./components/Buttons/Buttons";
 import { Footer } from "./components/Footer/Footer";
+import Navbar from "./components/Nav/NavBar";
+import { ColorPalette } from "./components/Palette/Palette";
 
 function App() {
   return (
     <>
       <div>
-        <NavComponent />
-        <HeaderComponent />
+        <Navbar />
+        <ColorPalette />
         <Footer />
       </div>
     </>
