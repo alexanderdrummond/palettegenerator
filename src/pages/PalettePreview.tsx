@@ -1,18 +1,34 @@
-import React from "react";
-import Navbar from "../components/Preview/Nav/Navbar";
-import Sidebar from "../components/Preview/Sidebar/Sidebar";
-import Content from "../components/Preview/Content/Content";
+import React, { useState } from "react";
+import Header from "../components/Preview/Header/Header";
 import Footer from "../components/Preview/Footer/Footer";
+import Content from "../components/Preview/Content/Content";
+import PaletteSelector from "../components/Preview/Selector/PaletteSelector";
+import "./PalettePreview.scss";
 
-const PalettePreview: React.FC = () => {
+const PalettePreview = () => {
+  const [headerColor, setHeaderColor] = useState<string>("");
+  const [footerColor, setFooterColor] = useState<string>("");
+  const [contentColor, setContentColor] = useState<string>("");
+
+  const onSelectPalette = (palette: number[][]) => {
+    const randomColor = (colors: number[][]) =>
+      `rgb(${colors[Math.floor(Math.random() * colors.length)].join(",")})`;
+
+    setHeaderColor(randomColor(palette));
+    setFooterColor(randomColor(palette));
+    setContentColor(randomColor(palette));
+  };
+
   return (
-    <div>
-      <Navbar />
-      <div style={{ display: "flex" }}>
-        <Sidebar />
-        <Content />
+    <div className="palette-preview">
+      <div className="selector-container">
+        <PaletteSelector onSelectPalette={onSelectPalette} />
       </div>
-      <Footer />
+      <div className="app-window">
+        <Header backgroundColor={headerColor} />
+        <Content backgroundColor={contentColor} />
+        <Footer backgroundColor={footerColor} />
+      </div>
     </div>
   );
 };
