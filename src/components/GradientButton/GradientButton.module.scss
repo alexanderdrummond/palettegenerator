@@ -8,9 +8,34 @@
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  min-width: 120px;
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+}
 
-  &:hover {
-    transform: scale(1.05);
-  }
+.gradientButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: linear-gradient(to right, #cf9407, #601e3e);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.gradientButton:hover::before {
+  transform: scaleX(1);
+}
+
+.gradientButton:hover {
+  transform: scale(1.05);
+  border-color: transparent;
 }
