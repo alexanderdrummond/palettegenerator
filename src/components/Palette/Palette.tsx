@@ -4,6 +4,8 @@ import { ColorPalette as PaletteType } from "../../utils/types";
 import { savePaletteToLS } from "../../utils/mainutils";
 import GradientButton from "../GradientButton/GradientButton";
 import clipboardIcon from "../../assets/Clipboard.svg";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const rgbToHex = (rgb: number[]): string => {
   return (
@@ -32,6 +34,7 @@ export const ColorPalette: React.FC = () => {
       if (http.readyState === 4 && http.status === 200) {
         const palette = JSON.parse(http.responseText).result;
         setColors(palette);
+        toast.success('Colors generated successfully!');
       }
     };
 
@@ -70,7 +73,7 @@ export const ColorPalette: React.FC = () => {
             </div>
           );
         })}
-        
+
       </section>
       <div className={styles.btnContainer}>
         <GradientButton text="Generate" onClick={fetchColors} />
@@ -78,7 +81,7 @@ export const ColorPalette: React.FC = () => {
           <GradientButton text="Save this one!" onClick={savePalette} />
         )}
       </div>
-     
+
     </div>
   );
 };
