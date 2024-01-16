@@ -3,3 +3,17 @@
   font-family: "Karla", sans-serif;
   background-color: #212121;
 }
+
+body .Toastify__toast--success {
+  background: black !important;
+  opacity: 1 !important;
+}
+
+body .Toastify__toast--success .Toastify__toast-body {
+  background: black !important;
+}
+
+.Toastify__toast--success .Toastify__toast-body,
+.Toastify__toast--success .Toastify__toast-body * {
+  background: black !important;
+}
