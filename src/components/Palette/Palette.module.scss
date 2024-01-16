@@ -48,8 +48,7 @@
   flex-direction: column;
   align-items: flex-start;
   margin: 10px;
-  
-  
+
   animation: fadeIn 0.5s ease-out;
 
   .colorBlock {
@@ -94,15 +93,12 @@
 
 @media only screen and (max-width: 750px) {
   .container {
-    margin-top: 300px;
-  
-  
     .colorSection {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       max-width: 440px;
-      margin: auto;      
+      margin: auto;
       margin-bottom: 30px;
     }
 
@@ -110,51 +106,12 @@
       display: flex;
       flex-direction: column;
       transition: margin-top 0.5s ease-out;
-      margin-top: 25rem;
+      margin-top: 5rem;
       margin: 0.33rem;
-      
-      button{
+
+      button {
         margin-bottom: 10px;
       }
-      
-      
     }
   }
-  
- 
-
-}
-
-
-@media only screen and (max-width: 1120px) {
-  .container {
-    margin-top: 300px;
-  
-  
-    .colorSection {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      max-width: 440px;
-      margin: auto;      
-      margin-bottom: 30px;
-    }
-
-    .btnContainer {
-      display: flex;
-      flex-direction: column;
-      transition: margin-top 0.5s ease-out;
-      margin-top: 25rem;
-      margin: 0.33rem;
-      
-      button{
-        margin-bottom: 10px;
-      }
-      
-      
-    }
-  }
-  
- 
-
 }
