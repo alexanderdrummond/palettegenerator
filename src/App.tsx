@@ -4,6 +4,9 @@ import Navbar from "./components/Nav/NavBar";
 import { ColorPalette } from "./components/Palette/Palette";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SavedPalettes from "./pages/SavedPalettes";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function App() {
   return (
@@ -17,6 +20,7 @@ function App() {
               <>
                 <ColorPalette />
                 <Footer />
+                <ToastContainer />
               </>
             }
           />
