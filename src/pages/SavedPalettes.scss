@@ -1,0 +1,13 @@
+body .Toastify__toast--error {
+  background: black !important;
+  opacity: 1 !important;
+}
+
+body .Toastify__toast--error .Toastify__toast-body {
+  background: black !important;
+}
+
+.Toastify__toast--error .Toastify__toast-body,
+.Toastify__toast--error .Toastify__toast-body * {
+  background: black !important;
+}
