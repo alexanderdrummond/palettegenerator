@@ -16,3 +16,20 @@ body .Toastify__toast--success .Toastify__toast-body {
 .Toastify__toast--success .Toastify__toast-body * {
   background: black !important;
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
