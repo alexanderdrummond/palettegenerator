@@ -34,7 +34,17 @@ export const ColorPalette: React.FC = () => {
       if (http.readyState === 4 && http.status === 200) {
         const palette = JSON.parse(http.responseText).result;
         setColors(palette);
-        toast.success('Colors generated successfully!');
+        toast.success('Colors generated successfully!', {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+      
+        });
       }
     };
 
