@@ -4,9 +4,9 @@ import Navbar from "./components/Nav/NavBar";
 import { ColorPalette } from "./components/Palette/Palette";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SavedPalettes from "./pages/SavedPalettes";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import PalettePreview from "./pages/PalettePreview";
 
 function App() {
   return (
@@ -25,6 +25,7 @@ function App() {
             }
           />
           <Route path="/saved-palettes" element={<SavedPalettes />} />
+          <Route path="/palette-preview" element={<PalettePreview />} />
         </Routes>
       </>
     </Router>

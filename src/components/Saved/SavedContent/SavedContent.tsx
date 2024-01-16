@@ -1,13 +1,22 @@
 import React, { useEffect, useState } from "react";
 import styles from "./SavedContent.module.scss";
 import clipboardIcon from "../../../assets/Clipboard.svg";
-import { getSavedPalettesFromLS } from "../../../utils/mainutils";
+import {
+  getSavedPalettesFromLS,
+  deletePaletteFromLS,
+} from "../../../utils/mainutils";
 import GradientButton from "../../GradientButton/GradientButton";
+import { useNavigate } from "react-router-dom";
 
 type ColorPalette = number[][];
 
 const SavedContent: React.FC = () => {
   const [savedColors, setSavedColors] = useState<ColorPalette[]>([]);
+  const navigate = useNavigate();
+
+  const handlePreview = (palette: ColorPalette) => {
+    navigate("/palette-preview", { state: { palette } });
+  };
 
   useEffect(() => {
     const palettes = getSavedPalettesFromLS();
@@ -15,6 +24,13 @@ const SavedContent: React.FC = () => {
       setSavedColors(palettes);
     }
   }, []);
+
+  const handleDelete = (index: number) => {
+    deletePaletteFromLS(index);
+    setSavedColors((currentPalettes) =>
+      currentPalettes.filter((_, i) => i !== index)
+    );
+  };
 
   const rgbToHex = (rgb: number[]): string => {
     return (
@@ -56,8 +72,14 @@ const SavedContent: React.FC = () => {
                 );
               })}
               <div className={styles.buttonsContainer}>
-                <GradientButton text="Preview" onClick={() => {}} />
-                <GradientButton text="Remove" onClick={() => {}} />
+                <GradientButton
+                  text="Preview"
+                  onClick={() => handlePreview(palette)}
+                />
+                <GradientButton
+                  text="Remove"
+                  onClick={() => handleDelete(index)}
+                />
               </div>
             </div>
             {index < savedColors.length - 1 && (
