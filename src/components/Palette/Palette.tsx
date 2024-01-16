@@ -56,7 +56,33 @@ export const ColorPalette: React.FC = () => {
   };
 
   const handleCopy = (hex: string) => {
-    navigator.clipboard.writeText(hex);
+    navigator.clipboard.writeText(hex).then(
+      () => {
+        toast.success("Hex code copied to clipboard!", {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
+      },
+      (err) => {
+        console.error("Could not copy text: ", err);
+        toast.error("Failed to copy hex code!", {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
+      }
+    );
   };
 
   return (

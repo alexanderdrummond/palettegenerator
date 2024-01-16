@@ -8,7 +8,13 @@
   header {
     h2 {
       font-size: 6rem;
-      background: -webkit-linear-gradient(rgb(188, 12, 241), rgb(212, 166, 4));
+      background: linear-gradient(
+        94.75deg,
+        #cf9407 26.79%,
+        #bdbf63 49.8%,
+        #601e3e 70.09%
+      );
+
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -48,8 +54,7 @@
   flex-direction: column;
   align-items: flex-start;
   margin: 10px;
-  
-  
+
   animation: fadeIn 0.5s ease-out;
 
   .colorBlock {
@@ -95,14 +100,13 @@
 @media only screen and (max-width: 750px) {
   .container {
     margin-top: 300px;
-  
-  
+
     .colorSection {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       max-width: 440px;
-      margin: auto;      
+      margin: auto;
       margin-bottom: 30px;
     }
 
@@ -112,31 +116,24 @@
       transition: margin-top 0.5s ease-out;
       margin-top: 25rem;
       margin: 0.33rem;
-      
-      button{
+
+      button {
         margin-bottom: 10px;
       }
-      
-      
     }
   }
-  
- 
-
 }
-
 
 @media only screen and (max-width: 1120px) {
   .container {
     margin-top: 300px;
-  
-  
+
     .colorSection {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       max-width: 440px;
-      margin: auto;      
+      margin: auto;
       margin-bottom: 30px;
     }
 
@@ -146,15 +143,10 @@
       transition: margin-top 0.5s ease-out;
       margin-top: 25rem;
       margin: 0.33rem;
-      
-      button{
+
+      button {
         margin-bottom: 10px;
       }
-      
-      
     }
   }
-  
- 
-
 }

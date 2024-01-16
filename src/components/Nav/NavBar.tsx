@@ -13,7 +13,9 @@ const Navbar: React.FC = () => {
   return (
     <header className={styles.header}>
       <div className={styles.topSection}>
-        <h1 className={styles.title}>Colorizer Palette Generator</h1>
+        <h1 className={styles.title} onClick={() => navigateTo("/")}>
+          Colorizer Palette Generator
+        </h1>
         <div className={styles.buttons}>
           <GradientButton
             text="Random Palette"
