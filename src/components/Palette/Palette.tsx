@@ -25,7 +25,7 @@ export const ColorPalette: React.FC = () => {
   const fetchColors = () => {
     const url = "http://colormind.io/api/";
     const data = {
-      model: "default",
+      model: "ui",
     };
 
     const http = new XMLHttpRequest();
