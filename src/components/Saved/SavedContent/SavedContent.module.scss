@@ -38,7 +38,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 120px;
+    width: 100%;
   }
 
   span {
@@ -91,5 +91,43 @@
     align-items: flex-start;
     justify-content: center;
     margin-left: 20px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .colorBlockContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+
+    .colorBlock {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 5px;
+      margin-top: 10px;
+    }
+    span {
+      font-size: 0.55rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .colorBlockContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+
+    .colorBlock {
+      width: 63px;
+      height: 63px;
+      margin-bottom: 5px;
+      margin-top: 10px;
+    }
+
+    span {
+      font-size: 0.5rem;
+    }
   }
 }
