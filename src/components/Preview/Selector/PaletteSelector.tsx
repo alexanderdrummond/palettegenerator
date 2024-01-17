@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./PaletteSelector.scss";
+import DownArrowIcon from "../../../assets/DownArrow.svg";
 
 const PaletteSelector = ({
   onSelectPalette,
@@ -21,7 +22,8 @@ const PaletteSelector = ({
   return (
     <div className="palette-selector">
       <button onClick={toggleDropdown} className="dropdown-button">
-        Select Palette
+        <p className="text">Select Palette</p>
+        <img src={DownArrowIcon} className="icon" />
       </button>
       {isOpen && (
         <div className="dropdown-menu">
