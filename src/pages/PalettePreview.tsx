@@ -5,6 +5,7 @@ import Content from "../components/Preview/Content/Content";
 import PaletteSelector from "../components/Preview/Selector/PaletteSelector";
 import "./PalettePreview.scss";
 import { useLocation } from "react-router-dom";
+import RefreshButton from "../components/Preview/Selector/RefreshButton";
 
 const PalettePreview = () => {
   const [headerColor, setHeaderColor] = useState<{
@@ -20,6 +21,21 @@ const PalettePreview = () => {
     textColor: string;
   }>({ backgroundColor: "", textColor: "" });
   const location = useLocation();
+
+  const handleRefreshClick = () => {
+    const savedPalettes = JSON.parse(
+      localStorage.getItem("savedPalettes") || "[]"
+    );
+
+    if (savedPalettes.length > 0) {
+      const selectedPaletteIndex = Math.floor(
+        Math.random() * savedPalettes.length
+      );
+      const selectedPalette = savedPalettes[selectedPaletteIndex];
+      onSelectPalette(selectedPalette);
+    } else {
+    }
+  };
 
   function isColorLight(r: number, g: number, b: number): boolean {
     const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
@@ -57,6 +73,7 @@ const PalettePreview = () => {
     <div className="palette-preview">
       <div className="selector-container">
         <PaletteSelector onSelectPalette={onSelectPalette} />
+        <RefreshButton onClick={handleRefreshClick} />
       </div>
       <div className="app-window">
         <Header

@@ -3,13 +3,19 @@
 
   .selector-container {
     margin-bottom: 20px;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
   }
 
   .app-window {
     margin: 0 auto;
     max-width: 800px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(70, 70, 70, 0.1);
     border-radius: 8px;
+    border: 2rem;
     overflow: hidden;
   }
 }
